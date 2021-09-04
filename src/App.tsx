@@ -1,13 +1,7 @@
-import "./App.css";
+import { Button } from "./components";
 
 function App() {
-	return (
-		<div className="App">
-			<header className="App-header">
-				<h1>Start working on Designo</h1>
-			</header>
-		</div>
-	);
+	return <Button.Light>Learn More</Button.Light>;
 }
 
 export default App;
