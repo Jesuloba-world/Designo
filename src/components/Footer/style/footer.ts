@@ -75,10 +75,6 @@ export const TextLight = styled(Text)`
 	font-weight: normal;
 `;
 
-export const Address = styled.div``;
-
-export const Contact = styled.div``;
-
 export const ContactIcons = styled.div`
 	display: flex;
 	align-items: end;

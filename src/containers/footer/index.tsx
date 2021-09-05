@@ -9,7 +9,7 @@ import { ReactComponent as YoutubeLogo } from "../../assets/shared/desktop/icon-
 export const FooterContainer: React.FC = ({ children }) => {
 	return (
 		<Footer>
-			{children}
+			{/* {children} */}
 			<Footer.TopFrame>
 				<Footer.Frame>
 					<Footer.Logo to={"/"} src={Logo} />

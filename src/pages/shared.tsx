@@ -1,12 +1,16 @@
 import { FC } from "react";
-import { HeaderContainer, FooterContainer } from "../containers";
+import { HeaderContainer, FooterContainer, CTAContainer } from "../containers";
+import { useLocation } from "react-router";
 
 export const Shared: FC = ({ children }) => {
+	const location = useLocation();
+
 	return (
 		<>
 			<HeaderContainer />
 			{children}
-			<FooterContainer></FooterContainer>
+			{location.pathname === "/contact" ? null : <CTAContainer />}
+			<FooterContainer />
 		</>
 	);
 };

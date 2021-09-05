@@ -7,8 +7,6 @@ import {
 	BottomFrame,
 	Logo,
 	NormalLink,
-	Address,
-	Contact,
 	ContactIcons,
 	Text,
 	Icon,
@@ -64,11 +62,11 @@ Footer.Link = ({ to, children }) => {
 };
 
 Footer.Address = ({ children }) => {
-	return <Address>{children}</Address>;
+	return <div>{children}</div>;
 };
 
 Footer.Contact = ({ children }) => {
-	return <Contact>{children}</Contact>;
+	return <div>{children}</div>;
 };
 
 Footer.ContactIcons = ({ children }) => {

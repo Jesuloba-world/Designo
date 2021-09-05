@@ -1,6 +1,10 @@
 import styled from "styled-components/macro";
 
-const Button = styled.button`
+export interface button {
+	onClick: () => void;
+}
+
+const Button = styled.button<button>`
 	border-radius: 8px;
 	border: none;
 	height: 5.6rem;
@@ -11,6 +15,7 @@ const Button = styled.button`
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	transition: all 0.15s;
+	cursor: pointer;
 
 	&:hover {
 		background: ${({ theme }) => theme.lightPeach};

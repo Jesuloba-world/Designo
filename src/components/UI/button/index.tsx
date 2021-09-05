@@ -1,18 +1,18 @@
-import { Light, Dark } from "./style/button";
+import { Light, Dark, button } from "./style/button";
 
 interface composition {
-	Light: React.FC;
-	Dark: React.FC;
+	Light: React.FC<button>;
+	Dark: React.FC<button>;
 }
 
 export const Button: React.FC & composition = () => {
 	return <button>Something</button>;
 };
 
-Button.Light = ({ children, ...restProps }) => {
-	return <Light {...restProps}>{children}</Light>;
+Button.Light = ({ children, onClick }) => {
+	return <Light onClick={onClick}>{children}</Light>;
 };
 
-Button.Dark = ({ children, ...restProps }) => {
-	return <Dark {...restProps}>{children}</Dark>;
+Button.Dark = ({ children, onClick }) => {
+	return <Dark onClick={onClick}>{children}</Dark>;
 };
