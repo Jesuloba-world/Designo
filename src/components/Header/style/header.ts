@@ -2,7 +2,7 @@ import styled from "styled-components/macro";
 import { Link as RouterLink } from "react-router-dom";
 
 export const Container = styled.div`
-	width: 111rem;
+	max-width: 111rem;
 	margin: 0 auto;
 	padding: 6.4rem 0;
 `;

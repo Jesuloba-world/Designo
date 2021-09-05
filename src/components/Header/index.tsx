@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Container, Frame, Logo, NormalLink } from "./style/header";
 
-interface linkProps {
+interface props {
 	to: string;
 	children?: any;
 	src?: string;
@@ -10,16 +10,16 @@ interface linkProps {
 
 interface composition {
 	Frame: FC;
-	Logo: FC<linkProps>;
-	Link: FC<linkProps>;
+	Logo: FC<props>;
+	Link: FC<props>;
 }
 
-export const Header: FC & composition = ({ children, ...restProps }) => {
-	return <Container {...restProps}>{children}</Container>;
+export const Header: FC & composition = ({ children }) => {
+	return <Container>{children}</Container>;
 };
 
-Header.Frame = ({ children, ...restProps }) => {
-	return <Frame {...restProps}>{children}</Frame>;
+Header.Frame = ({ children }) => {
+	return <Frame>{children}</Frame>;
 };
 
 Header.Logo = ({ to, src }) => {
@@ -30,10 +30,6 @@ Header.Logo = ({ to, src }) => {
 	);
 };
 
-Header.Link = ({ to, children, ...restProps }) => {
-	return (
-		<NormalLink to={to} {...restProps}>
-			{children}
-		</NormalLink>
-	);
+Header.Link = ({ to, children }) => {
+	return <NormalLink to={to}>{children}</NormalLink>;
 };
