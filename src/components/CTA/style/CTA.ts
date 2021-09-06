@@ -41,6 +41,7 @@ export const Frame = styled.div<frame>`
 export const BigText = styled(Heading2)`
 	color: ${({ theme }) => theme.white};
 	line-height: 4rem;
+	width: 30rem;
 `;
 
 export const SmallText = styled(Body)`

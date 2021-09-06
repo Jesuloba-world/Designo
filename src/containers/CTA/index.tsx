@@ -6,7 +6,6 @@ export const CTAContainer = () => {
 
 	const redirectToContactPage = () => {
 		history.push("/contact");
-		// console.log("redirecting...");
 	};
 
 	return (

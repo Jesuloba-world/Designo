@@ -1,6 +1,10 @@
 import { FC } from "react";
-import { Typo } from "../components";
+import { HeroContainer } from "../containers";
 
-export const Home: FC = ({ children }) => {
-	return <Typo.H1>This is the Home Page</Typo.H1>;
+export const Home: FC = () => {
+	return (
+		<>
+			<HeroContainer />
+		</>
+	);
 };
