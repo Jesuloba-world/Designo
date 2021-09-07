@@ -1,5 +1,14 @@
 import { Switch, Route } from "react-router-dom";
-import { Home, Shared, About, Contact, Location } from "./pages";
+import {
+	Home,
+	Shared,
+	About,
+	Contact,
+	Location,
+	AppDesign,
+	GraphicDesign,
+	WebDesign,
+} from "./pages";
 import { Typo } from "./components";
 
 function App() {
@@ -9,6 +18,9 @@ function App() {
 				<Route exact path="/about" component={About} />
 				<Route exact path="/contact" component={Contact} />
 				<Route exact path="/locations" component={Location} />
+				<Route exact path="/app-design" component={AppDesign} />
+				<Route exact path="/graphic-design" component={GraphicDesign} />
+				<Route exact path="/web-design" component={WebDesign} />
 				<Route
 					exact
 					path="/facebook"

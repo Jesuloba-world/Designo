@@ -9,7 +9,7 @@ export interface image {
 export const Container = styled.div`
 	background-color: ${({ theme }) => theme.peach};
 	height: 64rem;
-	width: 111rem;
+	max-width: 111rem;
 	margin: 0 auto;
 	border-radius: 1.5rem;
 	display: flex;
