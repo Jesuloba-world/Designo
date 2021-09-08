@@ -59,7 +59,7 @@ export const NormalLink = styled(RouterLink)`
 
 	&:hover,
 	&:active {
-		color: ${({ theme }) => theme.lightGrey};
+		text-decoration: underline;
 	}
 `;
 
@@ -77,8 +77,8 @@ export const TextLight = styled(Text)`
 
 export const ContactIcons = styled.div`
 	display: flex;
-	align-items: end;
-	justify-content: end;
+	align-items: flex-end;
+	justify-content: flex-end;
 `;
 
 export const Icon = styled(RouterLink)`

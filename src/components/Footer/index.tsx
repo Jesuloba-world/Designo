@@ -14,7 +14,7 @@ import {
 } from "./style/footer";
 
 interface props {
-	to: string;
+	to: any;
 	children?: any;
 	src?: string;
 }

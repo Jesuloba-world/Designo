@@ -35,6 +35,6 @@ export const NormalLink = styled(RouterLink)`
 
 	&:hover,
 	&:active {
-		color: ${({ theme }) => theme.black};
+		text-decoration: underline;
 	}
 `;

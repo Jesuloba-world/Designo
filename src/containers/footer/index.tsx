@@ -34,19 +34,19 @@ export const FooterContainer: React.FC = ({ children }) => {
 					<Footer.Text>M : contact@designo.co</Footer.Text>
 				</Footer.Contact>
 				<Footer.ContactIcons>
-					<Footer.Icon to={"/facebook"}>
+					<Footer.Icon to={{ pathname: "http://www.facebook.com" }}>
 						<FacebookLogo />
 					</Footer.Icon>
-					<Footer.Icon to={"/instagram"}>
+					<Footer.Icon to={{ pathname: "http://www.instagram.com" }}>
 						<InstagramLogo />
 					</Footer.Icon>
-					<Footer.Icon to={"/pinterest"}>
+					<Footer.Icon to={{ pathname: "http://www.pinterest.com" }}>
 						<PinterestLogo />
 					</Footer.Icon>
-					<Footer.Icon to={"/twitter"}>
+					<Footer.Icon to={{ pathname: "http://www.twitter.com" }}>
 						<TwitterLogo />
 					</Footer.Icon>
-					<Footer.Icon to={"/youtube"}>
+					<Footer.Icon to={{ pathname: "http://www.youtube.com" }}>
 						<YoutubeLogo />
 					</Footer.Icon>
 				</Footer.ContactIcons>

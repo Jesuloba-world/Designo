@@ -56,7 +56,7 @@ export const Design = styled(RouterLink)<design>`
 	text-decoration: none;
 
 	&:hover ${Mask} {
-		opacity: 0.8;
+		opacity: 0.6;
 	}
 
 	&:hover ${SmallText} svg {
