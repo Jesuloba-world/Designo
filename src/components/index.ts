@@ -5,3 +5,4 @@ export { Footer } from "./Footer";
 export { CTA } from "./CTA";
 export { Hero } from "./Hero";
 export { Section } from "./Section";
+export { Feature } from "./Feature";

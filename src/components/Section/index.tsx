@@ -7,6 +7,7 @@ import {
 	Frame,
 	BigText,
 	design,
+	section,
 } from "./style/section";
 import WebImageBig from "../../assets/home/desktop/image-web-design-large.jpg";
 import WebImageSmall from "../../assets/home/desktop/image-web-design-small.jpg";
@@ -18,8 +19,8 @@ interface composition {
 	Design: FC<design>;
 }
 
-export const Section: FC & composition = ({ children }) => {
-	return <Container>{children}</Container>;
+export const Section: FC<section> & composition = ({ isHome, children }) => {
+	return <Container isHome={isHome}>{children}</Container>;
 };
 
 Section.Design = ({ type, isBig }) => {

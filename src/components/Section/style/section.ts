@@ -2,21 +2,30 @@ import styled from "styled-components/macro";
 import { Heading3, Heading2 } from "../../UI/typography/style/typo";
 import { Link as RouterLink } from "react-router-dom";
 
+export interface section {
+	isHome?: boolean;
+}
 export interface design {
 	type: "web" | "app" | "graphic";
 	isBig?: boolean;
 	Image?: string;
 }
 
-export const Container = styled.div`
+export const Container = styled.div<section>`
 	max-width: 111rem;
-	height: 64rem;
+	/* height: 64rem; */
 	margin: 16rem auto;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(2, 1fr);
 	row-gap: 2.4rem;
 	column-gap: 3rem;
+	${({ isHome }) =>
+		isHome
+			? `
+	grid-template-rows:repeat(2, 1fr);
+	height: 64rem;
+	`
+			: `height: 30.8rem`}
 `;
 
 export const Mask = styled.div`
