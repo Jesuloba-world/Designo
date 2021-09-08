@@ -7,6 +7,7 @@ import {
 	Frame,
 	frame,
 	Overlay,
+	Padder,
 } from "./style/CTA";
 import { ReactComponent as CTAsvg } from "../../assets/shared/desktop/bg-pattern-call-to-action.svg";
 
@@ -24,10 +25,12 @@ interface composition {
 
 export const CTA: FC & composition = ({ children }) => {
 	return (
-		<Container>
-			<CTAsvg />
-			{children}
-		</Container>
+		<Padder>
+			<Container>
+				<CTAsvg />
+				{children}
+			</Container>
+		</Padder>
 	);
 };
 

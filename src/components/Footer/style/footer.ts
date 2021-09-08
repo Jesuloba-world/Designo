@@ -6,6 +6,10 @@ export const Container = styled.div`
 	width: 100%;
 	padding: 14.4rem 0 7.2rem 0;
 	height: 100%;
+
+	@media (max-width: 111rem) {
+		padding: 14.4rem 4rem 7.2rem 4rem;
+	}
 `;
 
 export const Frame = styled.div`

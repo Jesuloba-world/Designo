@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Link as RouterLink } from "react-router-dom";
-import { Container, Frame, Logo, NormalLink } from "./style/header";
+import { Container, Frame, Logo, NormalLink, Padder } from "./style/header";
 
 interface props {
 	to: string;
@@ -15,7 +15,11 @@ interface composition {
 }
 
 export const Header: FC & composition = ({ children }) => {
-	return <Container>{children}</Container>;
+	return (
+		<Padder>
+			<Container>{children}</Container>
+		</Padder>
+	);
 };
 
 Header.Frame = ({ children }) => {

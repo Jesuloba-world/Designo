@@ -5,6 +5,12 @@ export interface frame {
 	isLeft: boolean;
 }
 
+export const Padder = styled.div`
+	@media (max-width: 111rem) {
+		padding: 0 4rem;
+	}
+`;
+
 export const Container = styled.div`
 	height: 29.2rem;
 	max-width: 111rem;
