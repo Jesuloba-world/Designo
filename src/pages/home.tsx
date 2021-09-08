@@ -4,7 +4,8 @@ import {
 	SectionContainer,
 	FeatureContainer,
 } from "../containers";
-import { Page } from "./style/page";
+import { Page } from "../components";
+import {} from "../assets/shared/desktop/bg-pattern-leaf.svg";
 
 export const Home: FC = () => {
 	return (

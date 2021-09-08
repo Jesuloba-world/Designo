@@ -6,3 +6,4 @@ export { CTA } from "./CTA";
 export { Hero } from "./Hero";
 export { Section } from "./Section";
 export { Feature } from "./Feature";
+export { Page } from "./page";
