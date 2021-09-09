@@ -1,8 +1,9 @@
 import styled from "styled-components/macro";
 import { Link as RouterLink } from "react-router-dom";
+import { devices } from "../../devices";
 
 export const Padder = styled.div`
-	@media (max-width: 111rem) {
+	@media ${devices.desktopL} {
 		padding: 0 4rem;
 	}
 `;

@@ -9,7 +9,6 @@ import {
 	GraphicDesign,
 	WebDesign,
 } from "./pages";
-import { Typo } from "./components";
 
 function App() {
 	return (
@@ -21,46 +20,6 @@ function App() {
 				<Route exact path="/app-design" component={AppDesign} />
 				<Route exact path="/graphic-design" component={GraphicDesign} />
 				<Route exact path="/web-design" component={WebDesign} />
-				<Route
-					exact
-					path="/facebook"
-					component={() => {
-						window.location.href = "https://www.facebook.com";
-						return <Typo.H2>Redirecting...</Typo.H2>;
-					}}
-				/>
-				<Route
-					exact
-					path="/instagram"
-					component={() => {
-						window.location.href = "https://www.instagram.com";
-						return <Typo.H2>Redirecting...</Typo.H2>;
-					}}
-				/>
-				<Route
-					exact
-					path="/pinterest"
-					component={() => {
-						window.location.href = "https://www.pinterest.com";
-						return <Typo.H2>Redirecting...</Typo.H2>;
-					}}
-				/>
-				<Route
-					exact
-					path="/twitter"
-					component={() => {
-						window.location.href = "https://www.twitter.com";
-						return <Typo.H2>Redirecting...</Typo.H2>;
-					}}
-				/>
-				<Route
-					exact
-					path="/youtube"
-					component={() => {
-						window.location.href = "https://www.youtube.com";
-						return <Typo.H2>Redirecting...</Typo.H2>;
-					}}
-				/>
 				<Route exact path="/" component={Home} />
 			</Switch>
 		</Shared>

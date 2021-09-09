@@ -1,12 +1,13 @@
 import styled from "styled-components/macro";
 import { Heading2, Body } from "../../UI/typography/style/typo";
+import { devices } from "../../devices";
 
 export interface frame {
 	isLeft: boolean;
 }
 
 export const Padder = styled.div`
-	@media (max-width: 111rem) {
+	@media ${devices.desktopL} {
 		padding: 0 4rem;
 	}
 `;
@@ -35,6 +36,10 @@ export const Overlay = styled.div`
 	padding: 7.2rem 9.5rem 4.6rem 9.5rem;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+
+	@media ${devices.desktopS} {
+		padding: 7.2rem 5.8rem 4.6rem 5.8rem;
+	}
 `;
 
 export const Frame = styled.div<frame>`

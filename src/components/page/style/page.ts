@@ -1,10 +1,10 @@
 import styled from "styled-components/macro";
+import { devices } from "../../devices";
 
 export const Page = styled.div`
 	position: relative;
-	/* z-index: 1; */
 
-	@media (max-width: 111rem) {
+	@media ${devices.desktopL} {
 		padding: 0 4rem;
 	}
 `;
@@ -19,6 +19,10 @@ export const LeafContainer = styled.div`
 
 	svg {
 		position: absolute;
+
+		@media ${devices.desktopS} {
+			display: none;
+		}
 	}
 
 	svg:first-of-type {

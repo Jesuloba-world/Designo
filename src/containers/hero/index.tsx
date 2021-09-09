@@ -27,7 +27,9 @@ export const HeroContainer = () => {
 						Learn More
 					</Hero.Button>
 				</Hero.Frame>
-				<Hero.Image src={HeroPhone} alt={"phone"} />
+				<Hero.ImageHolder>
+					<Hero.Image src={HeroPhone} alt={"phone"} />
+				</Hero.ImageHolder>
 			</Hero.Mask>
 		</Hero>
 	);

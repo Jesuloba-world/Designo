@@ -1,5 +1,6 @@
 import styled from "styled-components/macro";
 import { Link as RouterLink } from "react-router-dom";
+import { devices } from "../../devices";
 
 export const Container = styled.div`
 	background-color: ${({ theme }) => theme.black};
@@ -7,7 +8,7 @@ export const Container = styled.div`
 	padding: 14.4rem 0 7.2rem 0;
 	height: 100%;
 
-	@media (max-width: 111rem) {
+	@media ${devices.desktopL} {
 		padding: 14.4rem 4rem 7.2rem 4rem;
 	}
 `;

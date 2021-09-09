@@ -5,6 +5,7 @@ import {
 	SmallText,
 	Frame,
 	HeroImage,
+	ImageHolder,
 	Mask,
 	image,
 } from "./style/hero";
@@ -22,6 +23,7 @@ interface composition {
 	BigText: FC;
 	SmallText: FC;
 	Button: FC<button>;
+	ImageHolder: FC;
 }
 
 export const Hero: FC & composition = ({ children }) => {
@@ -43,6 +45,10 @@ Hero.Frame = ({ children }) => {
 
 Hero.Image = ({ src, alt }) => {
 	return <HeroImage src={src} alt={alt} />;
+};
+
+Hero.ImageHolder = ({ children }) => {
+	return <ImageHolder>{children}</ImageHolder>;
 };
 
 Hero.BigText = ({ children }) => {
