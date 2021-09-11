@@ -32,6 +32,16 @@ export const Container = styled.div`
 	@media ${devices.tablet} {
 		height: 35rem;
 	}
+
+	@media ${devices.tablet500} {
+		height: 38rem;
+		transform: translateY(19rem);
+		margin-top: -15rem;
+	}
+
+	@media ${devices.mobile} {
+		height: 42rem;
+	}
 `;
 
 export const Overlay = styled.div`
@@ -55,6 +65,10 @@ export const Overlay = styled.div`
 		flex-direction: column;
 		justify-content: space-between;
 	}
+
+	@media ${devices.tablet700} {
+		padding: 6.4rem 2.4rem;
+	}
 `;
 
 export const Frame = styled.div<frame>`
@@ -69,6 +83,10 @@ export const Frame = styled.div<frame>`
 
 		${({ isLeft }) => (isLeft ? "height: 14.8rem" : null)};
 	}
+
+	@media ${devices.tablet500} {
+		${({ isLeft }) => (isLeft ? "height: auto; row-gap: 2rem" : null)};
+	}
 `;
 
 export const BigText = styled(Heading2)`
@@ -78,6 +96,10 @@ export const BigText = styled(Heading2)`
 
 	@media ${devices.tablet} {
 		text-align: center;
+	}
+
+	@media ${devices.tablet500} {
+		width: 100%;
 	}
 `;
 

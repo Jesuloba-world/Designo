@@ -21,7 +21,7 @@ export const Inner = styled.div`
 	}
 
 	@media ${devices.tablet700} {
-		padding: 2.4rem;
+		padding: 0 2.4rem;
 	}
 `;
 

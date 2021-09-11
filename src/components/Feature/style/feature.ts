@@ -21,11 +21,19 @@ export const Container = styled.div`
 		row-gap: 3.2rem;
 		height: auto;
 	}
+
+	@media ${devices.tablet600} {
+		row-gap: 8rem;
+	}
 `;
 
 export const Oval = styled.div<ovalTypes>`
 	position: relative;
 	margin-right: 4.8rem;
+
+	@media ${devices.tablet600} {
+		margin-right: 0;
+	}
 
 	&::after {
 		content: "";
@@ -68,6 +76,11 @@ export const Frame = styled.div`
 	@media ${devices.tablet} {
 		flex-direction: row;
 	}
+
+	@media ${devices.tablet600} {
+		flex-direction: column;
+		row-gap: 4.8rem;
+	}
 `;
 
 export const Frame2 = styled.div`
@@ -82,6 +95,13 @@ export const Frame2 = styled.div`
 		width: auto;
 		align-items: flex-start;
 	}
+
+	@media ${devices.tablet600} {
+		align-items: center;
+		height: 16.2rem;
+		row-gap: 3.2rem;
+		height: auto;
+	}
 `;
 
 export const SmallText = styled(Body)`
@@ -89,5 +109,9 @@ export const SmallText = styled(Body)`
 
 	@media ${devices.tablet} {
 		text-align: left;
+	}
+
+	@media ${devices.tablet600} {
+		text-align: center;
 	}
 `;

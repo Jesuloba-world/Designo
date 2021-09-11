@@ -75,6 +75,10 @@ export const Design = styled(RouterLink)<design>`
 		height: 20rem;
 	}
 
+	@media ${devices.tablet500} {
+		height: 25rem;
+	}
+
 	&:hover ${Mask} {
 		opacity: 0.6;
 	}
@@ -87,6 +91,12 @@ export const Design = styled(RouterLink)<design>`
 export const BigText = styled(Heading2)`
 	color: ${({ theme }) => theme.white};
 	text-transform: uppercase;
+
+	@media ${devices.tablet500} {
+		font-size: 2.8rem;
+		line-height: 3.6rem;
+		letter-spacing: 1.4px;
+	}
 `;
 
 export const Frame = styled.div`

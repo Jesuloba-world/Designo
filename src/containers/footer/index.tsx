@@ -13,7 +13,7 @@ export const FooterContainer: React.FC = ({ children }) => {
 			<Footer.TopFrame>
 				<Footer.Frame>
 					<Footer.Logo to={"/"} src={Logo} />
-					<Footer.Frame>
+					<Footer.Frame links>
 						<Footer.Link to={"/about"}>Our Company</Footer.Link>
 						<Footer.Link to={"/locations"}>Locations</Footer.Link>
 						<Footer.Link to={"/contact"}>Contact</Footer.Link>

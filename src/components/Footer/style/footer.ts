@@ -2,6 +2,10 @@ import styled from "styled-components/macro";
 import { Link as RouterLink } from "react-router-dom";
 import { devices } from "../../devices";
 
+export interface link {
+	links?: boolean;
+}
+
 export const Container = styled.div`
 	background-color: ${({ theme }) => theme.black};
 	width: 100%;
@@ -15,12 +19,50 @@ export const Container = styled.div`
 	@media ${devices.tablet700} {
 		padding: 14.4rem 2.4rem 7.2rem 2.4rem;
 	}
+
+	@media ${devices.tablet500} {
+		padding: 25.3rem 2.4rem 7.2rem 2.4rem;
+	}
 `;
 
-export const Frame = styled.div`
+export const Frame = styled.div<link>`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
+	@media ${devices.tablet600} {
+		display: block;
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	@media ${devices.tablet500} {
+		${({ links }) =>
+			links
+				? `display: flex;
+		flex-direction: column;
+		width: 100%;
+		align-items: stretch;
+		row-gap: 3.2rem`
+				: null}
+	}
+`;
+
+export const LogoLink = styled(RouterLink)`
+	display: block;
+
+	&::after {
+		content: "";
+		display: none;
+		height: 1px;
+		background-color: ${({ theme }) => theme.white};
+		opacity: 0.1;
+		margin: 3.2rem 0;
+
+		@media ${devices.tablet600} {
+			display: block;
+		}
+	}
 `;
 
 export const TopFrame = styled.div`
@@ -35,6 +77,10 @@ export const TopFrame = styled.div`
 		opacity: 0.1;
 		margin-top: 4rem;
 		margin-bottom: 3rem;
+
+		@media ${devices.tablet600} {
+			display: none;
+		}
 	}
 `;
 
@@ -46,9 +92,13 @@ export const BottomFrame = styled.div`
 	grid-template-columns: repeat(3, 1fr);
 
 	@media ${devices.tablet700} {
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: auto;
 		row-gap: 4rem;
+	}
+
+	@media ${devices.tablet500} {
+		grid-template-columns: 1fr;
 	}
 `;
 
@@ -66,9 +116,14 @@ export const NormalLink = styled(RouterLink)`
 		text-decoration: none;
 		color: ${({ theme }) => theme.white};
 		text-transform: uppercase;
+		width: auto;
 
 		&:not(:last-child) {
 			margin-right: 4.2rem;
+
+			@media ${devices.tablet500} {
+				margin-right: 0;
+			}
 		}
 	}
 
@@ -78,11 +133,17 @@ export const NormalLink = styled(RouterLink)`
 	}
 `;
 
-export const Contact = styled.div`
+export const Address = styled.div`
 	@media ${devices.tablet700} {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
+`;
+
+export const Contact = styled(Address)`
+	@media ${devices.tablet500} {
+		grid-row: 2;
 	}
 `;
 

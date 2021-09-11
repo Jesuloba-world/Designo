@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { Link as RouterLink } from "react-router-dom";
 import {
 	Container,
 	Frame,
@@ -7,11 +6,14 @@ import {
 	BottomFrame,
 	Logo,
 	NormalLink,
+	Address,
 	Contact,
 	ContactIcons,
 	Text,
 	Icon,
+	LogoLink,
 	TextLight,
+	link,
 } from "./style/footer";
 
 interface props {
@@ -21,7 +23,7 @@ interface props {
 }
 
 interface composition {
-	Frame: FC;
+	Frame: FC<link>;
 	TopFrame: FC;
 	BottomFrame: FC;
 	Logo: FC<props>;
@@ -38,8 +40,8 @@ export const Footer: FC & composition = ({ children }) => {
 	return <Container>{children}</Container>;
 };
 
-Footer.Frame = ({ children }) => {
-	return <Frame>{children}</Frame>;
+Footer.Frame = ({ children, links }) => {
+	return <Frame links={links}>{children}</Frame>;
 };
 
 Footer.TopFrame = ({ children }) => {
@@ -52,9 +54,9 @@ Footer.BottomFrame = ({ children }) => {
 
 Footer.Logo = ({ to, src }) => {
 	return (
-		<RouterLink to={to}>
+		<LogoLink to={to}>
 			<Logo src={src} />
-		</RouterLink>
+		</LogoLink>
 	);
 };
 
@@ -63,7 +65,7 @@ Footer.Link = ({ to, children }) => {
 };
 
 Footer.Address = ({ children }) => {
-	return <Contact>{children}</Contact>;
+	return <Address>{children}</Address>;
 };
 
 Footer.Contact = ({ children }) => {

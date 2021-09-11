@@ -6,6 +6,7 @@ const size = {
 	tablet600: "37.5em", //600px
 	tablet500: "31.25em", //500px
 	mobile: "25em", //400px
+	mobileS: "21.875em", //350px
 };
 
 export const devices = {
@@ -16,4 +17,5 @@ export const devices = {
 	tablet600: `(max-width: ${size.tablet600})`,
 	tablet500: `(max-width: ${size.tablet500})`,
 	mobile: `(max-width: ${size.mobile})`,
+	mobileS: `(max-width: ${size.mobileS})`,
 };

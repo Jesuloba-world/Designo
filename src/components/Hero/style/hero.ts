@@ -66,15 +66,8 @@ export const Frame = styled.div`
 		margin: 0;
 		align-items: center;
 		width: 100%;
-		height: 32.6rem;
-	}
-
-	@media ${devices.tablet700} {
-		height: 31.2rem;
-	}
-
-	@media ${devices.tablet600} {
-		height: 32.6rem;
+		height: auto;
+		row-gap: 2.4rem;
 	}
 `;
 
@@ -83,11 +76,6 @@ export const BigText = styled(Heading1)`
 
 	@media ${devices.tablet} {
 		text-align: center;
-	}
-
-	@media ${devices.tablet600} {
-		font-size: 4rem;
-		line-height: 112.5%;
 	}
 
 	@media ${devices.tablet500} {
@@ -119,6 +107,14 @@ export const ImageHolder = styled.div`
 
 	@media ${devices.tablet500} {
 		bottom: -20rem;
+	}
+
+	@media ${devices.mobile} {
+		bottom: -25rem;
+	}
+
+	@media ${devices.mobileS} {
+		bottom: -27rem;
 	}
 `;
 
