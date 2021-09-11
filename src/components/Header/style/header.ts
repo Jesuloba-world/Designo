@@ -6,6 +6,10 @@ export const Padder = styled.div`
 	@media ${devices.desktopL} {
 		padding: 0 4rem;
 	}
+
+	@media ${devices.tablet700} {
+		padding: 0 2.4rem;
+	}
 `;
 
 export const Container = styled.div`

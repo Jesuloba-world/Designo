@@ -10,6 +10,10 @@ export const Padder = styled.div`
 	@media ${devices.desktopL} {
 		padding: 0 4rem;
 	}
+
+	@media ${devices.tablet700} {
+		padding: 0 2.4rem;
+	}
 `;
 
 export const Container = styled.div`
@@ -24,6 +28,10 @@ export const Container = styled.div`
 	justify-content: flex-end;
 	overflow: hidden;
 	position: relative;
+
+	@media ${devices.tablet} {
+		height: 35rem;
+	}
 `;
 
 export const Overlay = styled.div`
@@ -40,6 +48,13 @@ export const Overlay = styled.div`
 	@media ${devices.desktopS} {
 		padding: 7.2rem 5.8rem 4.6rem 5.8rem;
 	}
+
+	@media ${devices.tablet} {
+		padding: 5.8rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
 `;
 
 export const Frame = styled.div<frame>`
@@ -47,14 +62,30 @@ export const Frame = styled.div<frame>`
 	flex-direction: column;
 	justify-content: space-around;
 	${({ isLeft }) => (!isLeft ? "align-items: flex-end" : null)};
+
+	@media ${devices.tablet} {
+		align-items: center;
+		justify-content: space-between;
+
+		${({ isLeft }) => (isLeft ? "height: 14.8rem" : null)};
+	}
 `;
 
 export const BigText = styled(Heading2)`
 	color: ${({ theme }) => theme.white};
 	line-height: 4rem;
 	width: 30rem;
+
+	@media ${devices.tablet} {
+		text-align: center;
+	}
 `;
 
 export const SmallText = styled(Body)`
 	color: ${({ theme }) => theme.white};
+
+	@media ${devices.tablet} {
+		text-align: center;
+		max-width: 45rem;
+	}
 `;

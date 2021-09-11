@@ -1,7 +1,12 @@
-import { Page as Container, LeafContainer } from "./style/page";
+import { Page as Container, LeafContainer, Inner } from "./style/page";
 import { ReactComponent as Leaf } from "../../assets/shared/desktop/bg-pattern-leaf.svg";
+import { FC } from "react";
 
-export const Page: React.FC = ({ children }) => {
+interface composition {
+	Inner: FC;
+}
+
+export const Page: FC & composition = ({ children }) => {
 	return (
 		<Container>
 			{children}
@@ -11,4 +16,8 @@ export const Page: React.FC = ({ children }) => {
 			</LeafContainer>
 		</Container>
 	);
+};
+
+Page.Inner = ({ children }) => {
+	return <Inner>{children}</Inner>;
 };

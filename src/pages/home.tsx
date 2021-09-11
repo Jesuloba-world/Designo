@@ -11,8 +11,10 @@ export const Home: FC = () => {
 	return (
 		<Page>
 			<HeroContainer />
-			<SectionContainer />
-			<FeatureContainer />
+			<Page.Inner>
+				<SectionContainer />
+				<FeatureContainer />
+			</Page.Inner>
 		</Page>
 	);
 };

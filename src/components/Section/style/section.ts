@@ -1,6 +1,7 @@
 import styled from "styled-components/macro";
 import { Heading3, Heading2 } from "../../UI/typography/style/typo";
 import { Link as RouterLink } from "react-router-dom";
+import { devices } from "../../devices";
 
 export interface section {
 	isHome?: boolean;
@@ -13,11 +14,10 @@ export interface design {
 
 export const Container = styled.div<section>`
 	max-width: 111rem;
-	/* height: 64rem; */
 	margin: 16rem auto;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	row-gap: 2.4rem;
+	row-gap: 2.5rem;
 	column-gap: 3rem;
 	${({ isHome }) =>
 		isHome
@@ -26,6 +26,12 @@ export const Container = styled.div<section>`
 	height: 64rem;
 	`
 			: `height: 30.8rem`}
+
+	@media ${devices.tablet} {
+		grid-template-columns: 100%;
+		grid-template-rows: auto;
+		height: auto;
+	}
 `;
 
 export const Mask = styled.div`
@@ -63,6 +69,11 @@ export const Design = styled(RouterLink)<design>`
 	align-items: center;
 	justify-content: center;
 	text-decoration: none;
+
+	@media ${devices.tablet} {
+		grid-row: span 1;
+		height: 20rem;
+	}
 
 	&:hover ${Mask} {
 		opacity: 0.6;

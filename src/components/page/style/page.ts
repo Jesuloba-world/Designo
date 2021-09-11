@@ -7,6 +7,22 @@ export const Page = styled.div`
 	@media ${devices.desktopL} {
 		padding: 0 4rem;
 	}
+
+	@media ${devices.tablet700} {
+		padding: 0;
+	}
+`;
+
+export const Inner = styled.div`
+	position: relative;
+
+	@media ${devices.desktopL} {
+		padding: 0 4rem;
+	}
+
+	@media ${devices.tablet700} {
+		padding: 2.4rem;
+	}
 `;
 
 export const LeafContainer = styled.div`

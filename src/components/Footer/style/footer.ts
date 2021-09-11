@@ -11,6 +11,10 @@ export const Container = styled.div`
 	@media ${devices.desktopL} {
 		padding: 14.4rem 4rem 7.2rem 4rem;
 	}
+
+	@media ${devices.tablet700} {
+		padding: 14.4rem 2.4rem 7.2rem 2.4rem;
+	}
 `;
 
 export const Frame = styled.div`
@@ -40,6 +44,12 @@ export const BottomFrame = styled.div`
 
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
+
+	@media ${devices.tablet700} {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+		row-gap: 4rem;
+	}
 `;
 
 export const Logo = styled.img`
@@ -68,6 +78,14 @@ export const NormalLink = styled(RouterLink)`
 	}
 `;
 
+export const Contact = styled.div`
+	@media ${devices.tablet700} {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+`;
+
 export const Text = styled.p`
 	font-size: 1.6rem;
 	font-weight: bold;
@@ -84,6 +102,12 @@ export const ContactIcons = styled.div`
 	display: flex;
 	align-items: flex-end;
 	justify-content: flex-end;
+
+	@media ${devices.tablet700} {
+		align-items: center;
+		justify-content: center;
+		grid-column: span 2;
+	}
 `;
 
 export const Icon = styled(RouterLink)`
