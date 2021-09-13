@@ -34,6 +34,11 @@ export const Container = styled.div<section>`
 		grid-template-columns: 100%;
 		grid-template-rows: auto;
 		height: auto;
+		margin: 12rem auto;
+	}
+
+	@media ${devices.tablet500} {
+		margin: 9.6rem auto;
 	}
 `;
 

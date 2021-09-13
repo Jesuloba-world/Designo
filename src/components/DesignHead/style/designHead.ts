@@ -1,5 +1,6 @@
 import styled from "styled-components/macro";
 import { Heading1, Body } from "../../UI/typography/style/typo";
+import { devices } from "../../devices";
 
 export const Container = styled.div`
 	background-color: ${({ theme }) => theme.peach};
@@ -12,6 +13,10 @@ export const Container = styled.div`
 	align-items: center;
 	justify-content: flex-end;
 	position: relative;
+
+	@media ${devices.tablet700} {
+		border-radius: 0;
+	}
 `;
 
 export const Mask = styled.div`
@@ -25,6 +30,10 @@ export const Mask = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+
+	@media ${devices.tablet} {
+		padding: 6.4rem 0;
+	}
 `;
 
 export const TextBig = styled(Heading1)`
