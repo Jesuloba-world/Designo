@@ -17,6 +17,10 @@ export const Container = styled.div`
 	@media ${devices.tablet700} {
 		border-radius: 0;
 	}
+
+	@media ${devices.mobile} {
+		height: 32rem;
+	}
 `;
 
 export const Mask = styled.div`
@@ -34,14 +38,30 @@ export const Mask = styled.div`
 	@media ${devices.tablet} {
 		padding: 6.4rem 0;
 	}
+
+	@media ${devices.mobile} {
+		padding: 0 1.2rem;
+		justify-content: center;
+		gap: 2.4rem;
+	}
 `;
 
 export const TextBig = styled(Heading1)`
 	color: ${({ theme }) => theme.white};
+
+	@media ${devices.mobile} {
+		font-size: 3.2rem;
+		line-height: 3.6rem;
+	}
 `;
 
 export const TextSmall = styled(Body)`
 	color: ${({ theme }) => theme.white};
 	max-width: 40rem;
 	text-align: center;
+
+	@media ${devices.mobile} {
+		font-size: 1.5rem;
+		line-height: 2.5rem;
+	}
 `;
