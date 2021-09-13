@@ -7,7 +7,7 @@ export interface section {
 	isHome?: boolean;
 }
 export interface design {
-	type: "web" | "app" | "graphic";
+	type?: "web" | "app" | "graphic";
 	isbig?: boolean;
 	image?: string;
 }

@@ -1,6 +1,19 @@
 import { FC } from "react";
-import { Typo } from "../components";
+import { Page } from "../components";
+import {
+	DesignHeadContainer,
+	PortfolioContainer,
+	SectionContainer,
+} from "../containers";
 
-export const AppDesign: FC = ({ children }) => {
-	return <Typo.H1>This is the App Design Page</Typo.H1>;
+export const AppDesign: FC = () => {
+	return (
+		<Page>
+			<DesignHeadContainer type="app" />
+			<Page.Inner>
+				<PortfolioContainer type="app" />
+				<SectionContainer />
+			</Page.Inner>
+		</Page>
+	);
 };

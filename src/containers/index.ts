@@ -5,3 +5,4 @@ export { HeroContainer } from "./hero";
 export { SectionContainer } from "./section";
 export { FeatureContainer } from "./feature";
 export { DesignHeadContainer } from "./designHead";
+export { PortfolioContainer } from "./portfolio";
