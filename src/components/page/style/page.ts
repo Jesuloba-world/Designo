@@ -1,6 +1,10 @@
 import styled from "styled-components/macro";
 import { devices } from "../../devices";
 
+interface leaf {
+	path: string;
+}
+
 export const Page = styled.div`
 	position: relative;
 
@@ -16,16 +20,12 @@ export const Page = styled.div`
 export const Inner = styled.div`
 	position: relative;
 
-	@media ${devices.desktopL} {
-		padding: 0 4rem;
-	}
-
 	@media ${devices.tablet700} {
 		padding: 0 2.4rem;
 	}
 `;
 
-export const LeafContainer = styled.div`
+export const LeafContainer = styled.div<leaf>`
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -44,11 +44,18 @@ export const LeafContainer = styled.div`
 	svg:first-of-type {
 		top: 32rem;
 		left: 0;
+		${({ path }) =>
+			path === "/web-design" ||
+			path === "/app-design" ||
+			path === "/graphic-design"
+				? `top: 12.6rem`
+				: null}
 	}
 
 	svg:last-of-type {
 		right: 0;
 		bottom: -30rem;
 		transform: rotate(180deg);
+		${({ path }) => (path !== "/" ? "display: none" : null)}
 	}
 `;

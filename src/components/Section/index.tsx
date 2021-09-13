@@ -23,7 +23,7 @@ export const Section: FC<section> & composition = ({ isHome, children }) => {
 	return <Container isHome={isHome}>{children}</Container>;
 };
 
-Section.Design = ({ type, isBig }) => {
+Section.Design = ({ type, isbig }) => {
 	let Image;
 
 	switch (type) {
@@ -34,14 +34,12 @@ Section.Design = ({ type, isBig }) => {
 			Image = GraphicImage;
 			break;
 		case "web":
-			Image = isBig ? WebImageBig : WebImageSmall;
+			Image = isbig ? WebImageBig : WebImageSmall;
 			break;
 	}
 
-	console.log(Image);
-
 	return (
-		<Design type={type} Image={Image} isBig={isBig} to={`${type}-design`}>
+		<Design type={type} image={Image} isbig={isbig} to={`${type}-design`}>
 			<Mask />
 			<Frame>
 				<BigText>{type} design</BigText>

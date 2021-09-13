@@ -7,3 +7,4 @@ export { Hero } from "./Hero";
 export { Section } from "./Section";
 export { Feature } from "./Feature";
 export { Page } from "./page";
+export { DesignHead } from "./DesignHead";

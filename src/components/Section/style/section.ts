@@ -8,8 +8,8 @@ export interface section {
 }
 export interface design {
 	type: "web" | "app" | "graphic";
-	isBig?: boolean;
-	Image?: string;
+	isbig?: boolean;
+	image?: string;
 }
 
 export const Container = styled.div<section>`
@@ -25,7 +25,10 @@ export const Container = styled.div<section>`
 	grid-template-rows:repeat(2, 1fr);
 	height: 64rem;
 	`
-			: `height: 30.8rem`}
+			: `
+			grid-template-rows: 1fr;
+			height: 30.8rem;
+			`}
 
 	@media ${devices.tablet} {
 		grid-template-columns: 100%;
@@ -59,11 +62,11 @@ export const SmallText = styled(Heading3)`
 export const Design = styled(RouterLink)<design>`
 	position: relative;
 	border-radius: 1.5rem;
-	background-image: url(${({ Image }) => Image});
+	background-image: url(${({ image }) => image});
 	background-size: cover;
 	background-position: center;
 	grid-row: ${({ type }) => (type === "web" ? `span 2` : null)};
-	grid-row: ${({ isBig }) => (!isBig ? `span 1` : null)};
+	grid-row: ${({ isbig }) => (!isbig ? `span 1` : null)};
 	overflow: hidden;
 	display: flex;
 	align-items: center;

@@ -4,3 +4,4 @@ export { CTAContainer } from "./CTA";
 export { HeroContainer } from "./hero";
 export { SectionContainer } from "./section";
 export { FeatureContainer } from "./feature";
+export { DesignHeadContainer } from "./designHead";

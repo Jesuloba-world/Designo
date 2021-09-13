@@ -14,9 +14,15 @@ export const SectionContainer = () => {
 
 	return (
 		<Section isHome={isHome}>
-			<Section.Design type={"web"} isBig={isBig} />
-			<Section.Design type={"app"} />
-			<Section.Design type={"graphic"} />
+			{!(location.pathname === "/web-design") ? (
+				<Section.Design type={"web"} isbig={isBig} />
+			) : null}
+			{!(location.pathname === "/app-design") ? (
+				<Section.Design type={"app"} />
+			) : null}
+			{!(location.pathname === "/graphic-design") ? (
+				<Section.Design type={"graphic"} />
+			) : null}
 		</Section>
 	);
 };

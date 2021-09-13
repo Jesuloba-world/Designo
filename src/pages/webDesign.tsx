@@ -1,6 +1,13 @@
-import { FC } from "react";
-import { Typo } from "../components";
+import { Page } from "../components";
+import { SectionContainer, DesignHeadContainer } from "../containers";
 
-export const WebDesign: FC = ({ children }) => {
-	return <Typo.H1>This is the Web Design Page</Typo.H1>;
+export const WebDesign = () => {
+	return (
+		<Page>
+			<DesignHeadContainer type="web" />
+			<Page.Inner>
+				<SectionContainer />
+			</Page.Inner>
+		</Page>
+	);
 };
