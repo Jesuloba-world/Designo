@@ -2,7 +2,11 @@ import styled from "styled-components/macro";
 import { Heading1, Body } from "../../UI/typography/style/typo";
 import { devices } from "../../devices";
 
-export const Container = styled.div`
+export interface props {
+	type: "web" | "app" | "graphic";
+}
+
+export const Container = styled.div<props>`
 	background-color: ${({ theme }) => theme.peach};
 	height: 25.2rem;
 	max-width: 111rem;
@@ -13,6 +17,8 @@ export const Container = styled.div`
 	align-items: center;
 	justify-content: flex-end;
 	position: relative;
+
+	${({ type }) => (type !== "web" ? `justify-content: flex-start;` : null)}
 
 	@media ${devices.tablet700} {
 		border-radius: 0;

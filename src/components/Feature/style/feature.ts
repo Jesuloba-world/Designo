@@ -10,7 +10,7 @@ export const Container = styled.div`
 	max-width: 111rem;
 	height: 41.2rem;
 	margin: 0 auto;
-	margin-bottom: 8.8rem;
+	margin-bottom: 16rem;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	column-gap: 3rem;
@@ -20,16 +20,24 @@ export const Container = styled.div`
 		grid-template-rows: auto;
 		row-gap: 3.2rem;
 		height: auto;
+		margin-bottom: 12rem;
 	}
 
 	@media ${devices.tablet600} {
 		row-gap: 8rem;
 	}
+
+	@media ${devices.tablet500} {
+		margin-bottom: 9.6rem;
+	}
 `;
 
 export const Oval = styled.div<ovalTypes>`
 	position: relative;
+
+	@media ${devices.tablet} {
 	margin-right: 4.8rem;
+	}
 
 	@media ${devices.tablet600} {
 		margin-right: 0;

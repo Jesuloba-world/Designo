@@ -9,7 +9,7 @@ export const DesignHeadContainer: React.FC<props> = ({ type }) => {
 	const { title, subtitle } = headings[type];
 
 	return (
-		<DesignHead>
+		<DesignHead type={type}>
 			<DesignHead.TextBig>{title}</DesignHead.TextBig>
 			<DesignHead.TextSmall>{subtitle}</DesignHead.TextSmall>
 		</DesignHead>

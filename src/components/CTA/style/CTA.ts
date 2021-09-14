@@ -28,6 +28,7 @@ export const Container = styled.div`
 	justify-content: flex-end;
 	overflow: hidden;
 	position: relative;
+	margin-top: -7.2rem;
 
 	@media ${devices.tablet} {
 		height: 35rem;
@@ -36,7 +37,11 @@ export const Container = styled.div`
 	@media ${devices.tablet500} {
 		height: 38rem;
 		transform: translateY(19rem);
-		margin-top: -15rem;
+		margin-top: -19rem;
+	}
+
+	@media ${devices.mobile} {
+		height: 42rem;
 	}
 
 	@media ${devices.mobile} {
@@ -85,7 +90,8 @@ export const Frame = styled.div<frame>`
 	}
 
 	@media ${devices.tablet500} {
-		${({ isLeft }) => (isLeft ? "height: auto; row-gap: 2rem" : null)};
+		${({ isLeft }) => (isLeft ? "height: auto" : null)};
+		row-gap: 2rem
 	}
 `;
 
