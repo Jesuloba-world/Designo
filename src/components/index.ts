@@ -9,3 +9,5 @@ export { Feature } from "./Feature";
 export { Page } from "./page";
 export { DesignHead } from "./DesignHead";
 export { Portfolio } from "./Portfolio";
+export { AboutHead } from "./AboutHead";
+export { AboutInfo } from "./AboutInfo";

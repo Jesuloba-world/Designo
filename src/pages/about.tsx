@@ -1,6 +1,12 @@
 import { FC } from "react";
-import { Typo } from "../components";
+import { AboutHeadContainer } from "../containers";
+import { Page } from "../components";
 
-export const About: FC = ({ children }) => {
-	return <Typo.H1>This is the About Page</Typo.H1>;
+export const About: FC = () => {
+	return (
+		<Page>
+			<AboutHeadContainer />
+			<Page.Inner></Page.Inner>
+		</Page>
+	);
 };
