@@ -7,7 +7,7 @@ import {
 import { Page } from "../components";
 import {} from "../assets/shared/desktop/bg-pattern-leaf.svg";
 
-export const Home: FC = () => {
+const Home: FC = () => {
 	return (
 		<Page>
 			<HeroContainer />
@@ -18,3 +18,5 @@ export const Home: FC = () => {
 		</Page>
 	);
 };
+
+export default Home;

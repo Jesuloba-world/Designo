@@ -27,6 +27,7 @@ export const Inner = styled.div`
 
 export const LeafContainer = styled.div<leaf>`
 	position: absolute;
+	overflow: hidden;
 	top: 0;
 	left: 0;
 	height: 100%;
@@ -56,6 +57,14 @@ export const LeafContainer = styled.div<leaf>`
 		right: 0;
 		bottom: -30rem;
 		transform: rotate(180deg);
-		${({ path }) => (path !== "/" ? "display: none" : null)}
+		${({ path }) => (path !== "/" ? "display: none;" : null)}
+		${({ path }) =>
+			path === "/about"
+				? `
+				display: block; 
+				transform: rotate(0) translateX(50%);
+				bottom: 38.8rem;
+				`
+				: null}
 	}
 `;

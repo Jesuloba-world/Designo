@@ -11,3 +11,4 @@ export { DesignHead } from "./DesignHead";
 export { Portfolio } from "./Portfolio";
 export { AboutHead } from "./AboutHead";
 export { AboutInfo } from "./AboutInfo";
+export { ToLocation } from "./ToLocation";

@@ -5,7 +5,7 @@ import {
 	PortfolioContainer,
 } from "../containers";
 
-export const WebDesign = () => {
+const WebDesign = () => {
 	return (
 		<Page>
 			<DesignHeadContainer type="web" />
@@ -16,3 +16,5 @@ export const WebDesign = () => {
 		</Page>
 	);
 };
+
+export default WebDesign;

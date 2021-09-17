@@ -21,7 +21,7 @@ interface props {
 }
 
 export const AboutInfo: FC<props> = ({ reverse, title, subtitle, image }) => {
-	const subs = subtitle.split("/");
+	const subs = subtitle.split("\n");
 
 	return (
 		<Container reverse={reverse}>

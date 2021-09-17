@@ -6,7 +6,7 @@ import {
 	SectionContainer,
 } from "../containers";
 
-export const GraphicDesign: FC = () => {
+const GraphicDesign: FC = () => {
 	return (
 		<Page>
 			<DesignHeadContainer type="graphic" />
@@ -17,3 +17,5 @@ export const GraphicDesign: FC = () => {
 		</Page>
 	);
 };
+
+export default GraphicDesign;

@@ -6,7 +6,7 @@ import {
 	SectionContainer,
 } from "../containers";
 
-export const AppDesign: FC = () => {
+const AppDesign: FC = () => {
 	return (
 		<Page>
 			<DesignHeadContainer type="app" />
@@ -17,3 +17,5 @@ export const AppDesign: FC = () => {
 		</Page>
 	);
 };
+
+export default AppDesign;
