@@ -27,12 +27,12 @@ export const Inner = styled.div`
 
 export const LeafContainer = styled.div<leaf>`
 	position: absolute;
-	overflow: hidden;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
 	z-index: -1;
+	${({ path }) => (path === "/about" ? "overflow: hidden;" : null)}
 
 	svg {
 		position: absolute;
