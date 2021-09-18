@@ -64,6 +64,10 @@ export const LeafContainer = styled.div<leaf>`
 				display: block; 
 				transform: rotate(0) translateX(50%);
 				bottom: 38.8rem;
+
+				@media ${devices.desktopS} {
+					display: none;
+				}
 				`
 				: null}
 	}

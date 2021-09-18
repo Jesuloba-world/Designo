@@ -1,5 +1,6 @@
 import styled from "styled-components/macro";
 import { Heading2, Body } from "../../UI/typography/style/typo";
+import { devices } from "../../devices";
 
 interface reverse {
 	reverse: boolean | undefined;
@@ -25,6 +26,19 @@ export const Container = styled.div<reverse>`
 		bottom: 0;
 		right: 19.7rem;
 	}`};
+
+	@media ${devices.tablet} {
+		height: 73.6rem;
+		margin-bottom: 12rem;
+	}
+
+	@media ${devices.tablet700} {
+		border-radius: 0;
+	}
+
+	@media ${devices.tablet500} {
+		height: 86.5rem;
+	}
 `;
 
 export const Mask = styled.div<reverse>`
@@ -35,11 +49,20 @@ export const Mask = styled.div<reverse>`
 	height: 100%;
 	display: flex;
 	${({ reverse }) => (reverse ? "flex-direction: row-reverse" : null)};
+
+	@media ${devices.tablet} {
+		flex-direction: column;
+	}
 `;
 
 export const Image = styled.img`
 	width: 42.88%;
 	object-fit: cover;
+
+	@media ${devices.tablet} {
+		width: 100%;
+		height: 32rem;
+	}
 `;
 
 export const Frame = styled.div`
@@ -48,10 +71,34 @@ export const Frame = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	gap: 2.4rem;
+
+	@media ${devices.tablet} {
+		padding: 0 5.8rem;
+		align-items: center;
+		height: 100%;
+	}
+
+	@media ${devices.tablet500} {
+		padding: 0 2.4rem;
+	}
 `;
 
 export const Title = styled(Heading2)`
 	color: ${({ theme }) => theme.peach};
+
+	@media ${devices.tablet500} {
+		font-size: 3.2rem;
+		line-height: 3.6rem;
+	}
 `;
 
-export const Subtitle = styled(Body)``;
+export const Subtitle = styled(Body)`
+	@media ${devices.tablet} {
+		text-align: center;
+	}
+
+	@media ${devices.tablet500} {
+		font-size: 15px;
+		line-height: 25px;
+	}
+`;

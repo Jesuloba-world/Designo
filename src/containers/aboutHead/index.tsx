@@ -1,5 +1,7 @@
 import { AboutHead } from "../../components";
 import AboutImage from "../../assets/about/desktop/image-about-hero.jpg";
+import AboutImageTablet from "../../assets/about/tablet/image-about-hero.jpg";
+import AboutImageMobile from "../../assets/about/mobile/image-about-hero.jpg";
 
 export const AboutHeadContainer = () => {
 	return (

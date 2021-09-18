@@ -15,13 +15,19 @@ export const Container = styled.div`
 	margin-bottom: 16rem;
 	position: relative;
 
+	@media ${devices.tablet} {
+		height: 63.2rem;
+		margin-bottom: 12rem;
+	}
+
 	@media ${devices.tablet700} {
 		border-radius: 0;
 	}
 
-	/* @media ${devices.mobile} {
-		height: 32rem;
-	} */
+	@media ${devices.tablet500} {
+		height: 71.5rem;
+		margin-bottom: 0;
+	}
 `;
 
 export const Mask = styled.div`
@@ -32,6 +38,11 @@ export const Mask = styled.div`
 	width: 100%;
 	display: grid;
 	grid-template-columns: 4fr 3fr;
+
+	@media ${devices.tablet} {
+		grid-template-columns: 100%;
+		grid-template-rows: 32rem auto;
+	}
 `;
 
 export const Frame = styled.div`
@@ -40,18 +51,47 @@ export const Frame = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	gap: 3.2rem;
+
+	@media ${devices.tablet} {
+		padding: 0 5.8rem;
+		grid-row: 2;
+		align-items: center;
+	}
+
+	@media ${devices.tablet500} {
+		gap: 2.4rem;
+		padding: 0 2.4rem;
+	}
 `;
 
 export const Title = styled(Heading1)`
 	color: ${({ theme }) => theme.white};
+
+	@media ${devices.tablet500} {
+		font-size: 3.2rem;
+		line-height: 3.6rem;
+	}
 `;
 
 export const Subtitle = styled(Body)`
 	color: ${({ theme }) => theme.white};
+
+	@media ${devices.tablet} {
+		text-align: center;
+	}
+
+	@media ${devices.tablet500} {
+		font-size: 15px;
+		line-height: 25px;
+	}
 `;
 
 export const Image = styled.img`
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+
+	@media ${devices.tablet} {
+		height: 32rem;
+	}
 `;

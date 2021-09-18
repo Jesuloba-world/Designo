@@ -1,5 +1,6 @@
 import styled from "styled-components/macro";
 import { Heading3 } from "../../UI/typography/style/typo";
+import { devices } from "../../devices";
 
 export interface ovalTypes {
 	country: "canada" | "australia" | "uk";
@@ -7,11 +8,17 @@ export interface ovalTypes {
 
 export const Container = styled.div`
 	max-width: 111rem;
-	/* height: 36.4rem; */
 	margin: 0 auto;
 	margin-bottom: 16rem;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+	column-gap: 3rem;
+	flex-wrap: wrap;
+	row-gap: 8rem;
+
+	@media ${devices.tablet} {
+		margin-bottom: 12rem;
+	}
 `;
 
 export const Oval = styled.div<ovalTypes>`
