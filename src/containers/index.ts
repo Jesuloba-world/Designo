@@ -8,3 +8,4 @@ export { DesignHeadContainer } from "./designHead";
 export { PortfolioContainer } from "./portfolio";
 export { AboutHeadContainer } from "./aboutHead";
 export { ToLocationContainer } from "./toLocation";
+export { LocationContainer } from "./location";

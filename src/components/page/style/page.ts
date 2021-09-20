@@ -36,6 +36,7 @@ export const LeafContainer = styled.div<leaf>`
 
 	svg {
 		position: absolute;
+		${({ path }) => (path === "/locations" ? "display: none;" : null)}
 
 		@media ${devices.desktopS} {
 			display: none;

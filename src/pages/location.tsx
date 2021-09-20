@@ -1,8 +1,13 @@
 import { FC } from "react";
-import { Typo } from "../components";
+import { Page } from "../components";
+import { LocationContainer } from "../containers";
 
-const Location: FC = ({ children }) => {
-	return <Typo.H1>This is the Locations Page</Typo.H1>;
+const Location: FC = () => {
+	return (
+		<Page>
+			<LocationContainer />
+		</Page>
+	);
 };
 
 export default Location;
