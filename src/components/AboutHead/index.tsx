@@ -8,7 +8,7 @@ import {
 	Image,
 } from "./style/aboutHead";
 import { ReactComponent as HeroSvg } from "../../assets/about/desktop/bg-pattern-hero-about-desktop.svg";
-import { ReactComponent as HeroSvgMobile } from "../../assets/about/mobile/bg-pattern-hero-about-mobile.svg";
+// import { ReactComponent as HeroSvgMobile } from "../../assets/about/mobile/bg-pattern-hero-about-mobile.svg";
 
 interface imageProps {
 	src: string;
