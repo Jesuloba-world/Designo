@@ -19,14 +19,16 @@ import { Button } from "../../components";
 interface textArea<Type> {
 	name: string;
 	placeholder: string;
-	value: string;
-	onChange: (event: FormEvent<Type>) => void;
+	value?: string;
+	onChange?: (event: FormEvent<Type>) => void;
 	id: string;
+	refs: any;
+	err: any;
 }
 
 interface input<Type> extends textArea<Type> {
 	type: string;
-	onChange: (event: FormEvent<Type>) => void;
+	onChange?: (event: FormEvent<Type>) => void;
 }
 
 interface form {
@@ -68,24 +70,32 @@ Contact.SubTitle = ({ children }) => {
 	return <SubTitle>{children}</SubTitle>;
 };
 
-Contact.Input = ({ id, ...props }) => {
+Contact.Input = ({ id, name, err, refs, ...props }) => {
 	return (
 		<InputContainer>
-			<Label htmlFor={id}>
-				<ErrorMessage>can't be empty</ErrorMessage> <ErrorIcon />
-			</Label>
-			<Input id={id} {...props} />
+			{err[name] ? (
+				<Label htmlFor={id}>
+					<ErrorMessage>{err[name].message}</ErrorMessage>{" "}
+					<ErrorIcon />
+				</Label>
+			) : null}
+
+			<Input id={id} name={name} {...refs(name)} {...props} />
 		</InputContainer>
 	);
 };
 
-Contact.TextArea = ({ id, ...props }) => {
+Contact.TextArea = ({ id, name, err, refs, ...props }) => {
 	return (
 		<InputContainer>
-			<Label htmlFor={id}>
-				<ErrorMessage>can't be empty</ErrorMessage> <ErrorIcon />
-			</Label>
-			<TextArea id={id} {...props} />
+			{err[name] ? (
+				<Label htmlFor={id}>
+					<ErrorMessage>{err[name].message}</ErrorMessage>{" "}
+					<ErrorIcon />
+				</Label>
+			) : null}
+
+			<TextArea id={id} name={name} {...refs(name)} {...props} />
 		</InputContainer>
 	);
 };

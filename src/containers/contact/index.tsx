@@ -1,23 +1,32 @@
 import { FormEvent, SyntheticEvent, useState } from "react";
-// import { useForm } from "react-hook-form";
 import { Contact } from "../../components";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+const schema = yup.object().shape({
+	name: yup.string().required("Can't be empty"),
+	email: yup
+		.string()
+		.email("Please use a valid email address")
+		.required("Can't be empty"),
+	phone: yup.string().min(9).notRequired(),
+	message: yup.string().required("Can't be empty"),
+});
 
 export const ContactContainer = () => {
-	const [name, setName] = useState("");
-	const [email, setEmail] = useState("");
-	const [phone, setPhone] = useState("");
-	const [message, setMessage] = useState("");
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+		reset,
+	} = useForm({
+		resolver: yupResolver(schema),
+	});
 
-	const resetAll = () => {
-		setName("");
-		setEmail("");
-		setPhone("");
-		setMessage("");
-	};
-
-	const submitForm = (event: SyntheticEvent) => {
-		event.preventDefault();
-		resetAll();
+	const submitForm = (data: any) => {
+		console.log(data);
+		reset();
 	};
 
 	return (
@@ -31,45 +40,37 @@ export const ContactContainer = () => {
 					that’s relatable to your users, drop us a line.
 				</Contact.SubTitle>
 			</Contact.Info>
-			<Contact.Form onSubmit={(event) => submitForm(event)}>
+			<Contact.Form onSubmit={handleSubmit(submitForm)}>
 				<Contact.Input
 					id={"name"}
 					type={"text"}
 					name={"name"}
 					placeholder={"name*"}
-					value={name}
-					onChange={(event: FormEvent<HTMLInputElement>) =>
-						setName(event.currentTarget.value)
-					}
+					refs={register}
+					err={errors}
 				/>
 				<Contact.Input
 					id={"email"}
 					type={"email"}
-					name={"email_address"}
+					name={"email"}
 					placeholder={"email address*"}
-					value={email}
-					onChange={(event: FormEvent<HTMLInputElement>) =>
-						setEmail(event.currentTarget.value)
-					}
+					refs={register}
+					err={errors}
 				/>
 				<Contact.Input
 					id={"phone"}
 					type={"text"}
 					name={"phone"}
 					placeholder={"phone"}
-					value={phone}
-					onChange={(event: FormEvent<HTMLInputElement>) =>
-						setPhone(event.currentTarget.value)
-					}
+					refs={register}
+					err={errors}
 				/>
 				<Contact.TextArea
 					id={"message"}
 					name={"message"}
 					placeholder={"Your Message*"}
-					value={message}
-					onChange={(event: FormEvent<HTMLTextAreaElement>) =>
-						setMessage(event.currentTarget.value)
-					}
+					refs={register}
+					err={errors}
 				/>
 				<Contact.Button>submit</Contact.Button>
 			</Contact.Form>
