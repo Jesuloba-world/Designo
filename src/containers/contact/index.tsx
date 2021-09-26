@@ -1,4 +1,3 @@
-import { FormEvent, SyntheticEvent, useState } from "react";
 import { Contact } from "../../components";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
