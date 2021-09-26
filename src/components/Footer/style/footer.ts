@@ -6,22 +6,30 @@ export interface link {
 	links?: boolean;
 }
 
-export const Container = styled.div`
+interface footer {
+	path: string;
+}
+
+export const Container = styled.div<footer>`
 	background-color: ${({ theme }) => theme.black};
 	width: 100%;
 	padding: 14.4rem 0 7.2rem 0;
 	height: 100%;
+	${({ path }) => (path === "/contact" ? `padding-top: 7.2rem;` : null)}
 
 	@media ${devices.desktopL} {
 		padding: 14.4rem 4rem 7.2rem 4rem;
+		${({ path }) => (path === "/contact" ? `padding-top: 7.2rem;` : null)}
 	}
 
 	@media ${devices.tablet700} {
 		padding: 14.4rem 2.4rem 7.2rem 2.4rem;
+		${({ path }) => (path === "/contact" ? `padding-top: 7.2rem;` : null)}
 	}
 
 	@media ${devices.tablet500} {
 		padding: 25.3rem 2.4rem 7.2rem 2.4rem;
+		${({ path }) => (path === "/contact" ? `padding-top: 7.2rem;` : null)}
 	}
 `;
 

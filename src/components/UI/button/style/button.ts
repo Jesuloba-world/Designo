@@ -1,10 +1,6 @@
 import styled from "styled-components/macro";
 
-export interface button {
-	onClick: () => void;
-}
-
-const Button = styled.button<button>`
+const Button = styled.button`
 	border-radius: 8px;
 	border: none;
 	height: 5.6rem;

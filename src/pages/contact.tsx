@@ -1,11 +1,13 @@
 import { FC } from "react";
-import { Typo } from "../components";
+import { Page } from "../components";
+import { ToLocationContainer, ContactContainer } from "../containers";
 
 const Contact: FC = ({ children }) => {
 	return (
-		<>
-			<Typo.H1>This is the Contact Page</Typo.H1>
-		</>
+		<Page>
+			<ContactContainer />
+			<ToLocationContainer />
+		</Page>
 	);
 };
 

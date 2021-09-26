@@ -12,7 +12,6 @@ export const Page: FC & composition = ({ children }) => {
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
-		console.log("I'm supposed to scroll to top");
 	}, []);
 
 	return (

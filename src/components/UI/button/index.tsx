@@ -1,4 +1,8 @@
-import { Light, Dark, button } from "./style/button";
+import { Light, Dark } from "./style/button";
+
+interface button {
+	onClick?: () => void;
+}
 
 interface composition {
 	Light: React.FC<button>;

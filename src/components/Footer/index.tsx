@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { useLocation } from "react-router-dom";
 import {
 	Container,
 	Frame,
@@ -37,7 +38,9 @@ interface composition {
 }
 
 export const Footer: FC & composition = ({ children }) => {
-	return <Container>{children}</Container>;
+	const location = useLocation();
+
+	return <Container path={location.pathname}>{children}</Container>;
 };
 
 Footer.Frame = ({ children, links }) => {

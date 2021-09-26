@@ -13,3 +13,4 @@ export { AboutHead } from "./AboutHead";
 export { AboutInfo } from "./AboutInfo";
 export { ToLocation } from "./ToLocation";
 export { Location } from "./Location";
+export { Contact } from "./Contact";
