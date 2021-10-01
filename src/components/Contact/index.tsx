@@ -11,10 +11,10 @@ import {
 	Label,
 	InputContainer,
 	ErrorMessage,
+	Button,
 } from "./style/contact";
 import { ReactComponent as ContactHeroSvg } from "../../assets/contact/desktop/bg-pattern-hero-desktop.svg";
 import { ReactComponent as ErrorIcon } from "../../assets/contact/desktop/icon-error.svg";
-import { Button } from "../../components";
 
 interface textArea<Type> {
 	name: string;
@@ -101,5 +101,5 @@ Contact.TextArea = ({ id, name, err, refs, ...props }) => {
 };
 
 Contact.Button = ({ children }) => {
-	return <Button.Light>{children}</Button.Light>;
+	return <Button>{children}</Button>;
 };
