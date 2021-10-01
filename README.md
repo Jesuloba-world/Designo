@@ -1,6 +1,6 @@
 ## New Project
 
-This is Designo, it is an imaginary web development company
+This is Designo, it is an fictional web development agency
 
 This is a challenge from frontend mentor
 
