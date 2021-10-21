@@ -6,4 +6,4 @@ This is a challenge from frontend mentor
 
 Written with Typescript, React and Styled Components for styling
 
-### work in progress...
+Now Complete
