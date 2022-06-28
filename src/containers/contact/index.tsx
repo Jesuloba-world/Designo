@@ -2,6 +2,8 @@ import { Contact } from "../../components";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import email from "@emailjs/browser";
+import { Loading } from "notiflix";
 
 const schema = yup.object().shape({
 	name: yup.string().required("Can't be empty"),
@@ -23,8 +25,18 @@ export const ContactContainer = () => {
 		resolver: yupResolver(schema),
 	});
 
-	const submitForm = (data: any) => {
-		console.log(data);
+	const submitForm = async (data: any) => {
+		Loading.standard("Sending Email", {
+			clickToClose: true,
+			svgColor: "#FFAD9B",
+		});
+		await email.send(
+			process.env.REACT_APP_EMAIL_SERVICE_ID!,
+			process.env.REACT_APP_EMAIL_TEMPLATE_ID!,
+			data,
+			process.env.REACT_APP_EMAIL_PUBLIC_KEY!
+		);
+		Loading.remove();
 		reset();
 	};
 
