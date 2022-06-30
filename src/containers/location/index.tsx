@@ -15,7 +15,7 @@ export const LocationContainer = () => {
 							3886 Wellington Street
 						</Location.TextNormal>
 						<Location.TextNormal>
-							Toronto, Ontario M9C 3J5
+							Ottawa, Ontario M9C 3J5
 						</Location.TextNormal>
 					</Location.Address>
 					<Location.Contact>
@@ -39,7 +39,7 @@ export const LocationContainer = () => {
 							19 Balonne Street
 						</Location.TextNormal>
 						<Location.TextNormal>
-							New South Wales 2443
+							Narrabri NSW 2390
 						</Location.TextNormal>
 					</Location.Address>
 					<Location.Contact>
@@ -63,7 +63,7 @@ export const LocationContainer = () => {
 							13 Colorado Way
 						</Location.TextNormal>
 						<Location.TextNormal>
-							Rhyd-y-fro SA8 9GA
+							Castleford, UK SA8 9GA
 						</Location.TextNormal>
 					</Location.Address>
 					<Location.Contact>

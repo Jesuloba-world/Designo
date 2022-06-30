@@ -5,7 +5,7 @@ import {
 	Frame,
 	Map,
 	Mask,
-	MapImage,
+	// MapImage,
 	InnerFrame,
 	Country,
 	Address,
@@ -15,9 +15,8 @@ import {
 	place,
 } from "./style/location";
 import { ReactComponent as TwoCircles } from "../../assets/shared/desktop/bg-pattern-two-circles.svg";
-import AustraliaMap from "../../assets/locations/desktop/image-map-australia.png";
-import CanadaMap from "../../assets/locations/desktop/image-map-canada.png";
-import UKMap from "../../assets/locations/desktop/image-map-united-kingdom.png";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { LatLngExpression } from "leaflet";
 
 interface where {
 	place: "canada" | "australia" | "uk";
@@ -33,6 +32,28 @@ interface composition {
 	TextBold: FC;
 	TextNormal: FC;
 }
+
+interface location {
+	[key: string]: {
+		name: string;
+		point: LatLngExpression;
+	};
+}
+
+const locations: location = {
+	canada: {
+		name: "Canada",
+		point: [45.42059625118941, -75.70491530237184],
+	},
+	uk: {
+		name: "UK",
+		point: [53.709839233540485, -1.3431766732264647],
+	},
+	australia: {
+		name: "Australia",
+		point: [-30.323827491902072, 149.78558246855954],
+	},
+};
 
 export const Location: FC & composition = ({ children }) => {
 	return <Container>{children}</Container>;
@@ -54,23 +75,24 @@ Location.Frame = ({ children }) => {
 };
 
 Location.Map = ({ place }) => {
-	let image = "";
-
-	switch (place) {
-		case "australia":
-			image = AustraliaMap;
-			break;
-		case "canada":
-			image = CanadaMap;
-			break;
-		case "uk":
-			image = UKMap;
-			break;
-	}
-
 	return (
 		<Map>
-			<MapImage src={image} alt={place} />
+			<MapContainer
+				center={locations[place].point}
+				zoom={16}
+				zoomControl={false}
+				scrollWheelZoom={false}
+			>
+				<TileLayer
+					attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+				/>
+				<Marker position={locations[place].point}>
+					<Popup>
+						Designo <br /> {locations[place].name} branch
+					</Popup>
+				</Marker>
+			</MapContainer>
 		</Map>
 	);
 };

@@ -2,6 +2,7 @@ import { Suspense, lazy } from "react";
 import { Switch, Route } from "react-router-dom";
 import { Shared } from "./pages/shared";
 import { Typo } from "./components";
+import "./App.css";
 
 const About = lazy(() => import("./pages/about"));
 const Contact = lazy(() => import("./pages/contact"));
