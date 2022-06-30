@@ -82,6 +82,8 @@ Location.Map = ({ place }) => {
 				zoom={16}
 				zoomControl={false}
 				scrollWheelZoom={false}
+				closePopupOnClick={true}
+				dragging={false}
 			>
 				<TileLayer
 					attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
