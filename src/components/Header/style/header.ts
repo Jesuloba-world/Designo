@@ -88,7 +88,7 @@ export const BackDrop = styled.div<clickable>`
 	height: calc(100% - 9.6rem);
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
-	z-index: 100;
+	z-index: 1200;
 `;
 
 export const NavBar = styled.div`
