@@ -2,19 +2,19 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import GlobalStyles from "./globalStyles";
 import { ThemeProvider } from "styled-components";
 import theme from "./theme";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<HashRouter>
+		<BrowserRouter>
 			<ThemeProvider theme={theme}>
 				<GlobalStyles />
 				<App />
 			</ThemeProvider>
-		</HashRouter>
+		</BrowserRouter>
 	</React.StrictMode>,
 	document.getElementById("root")
 );
